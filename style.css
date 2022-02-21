@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+body{
+    display: flex;
+    flex-direction: column;
+   height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-body{
+    height: 75%;
+    display: flex;
+    justify-content: center;
+  
+    
+}
+
+button:hover{
+    background-color: pink;
+}
+.controls{
+    
+    width: 25%;
+    display: flex;
+    justify-content: end;
+}
+.drawingpad{
+    width: 60%;
+
+    
+}
+
+.buttons{
+    display: flex; 
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    flex-direction: column;
+    width: 40%;
+    margin: 10%;
+    
+    background-color: aquamarine;
+    border-radius: 0.8rem;
+    box-shadow: 3px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5%;
+}
+
+.header{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Staatliches', cursive;
+    font-size: 200%;
+}
+button{
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 0.7rem;
+}
+
+.drawingpad{
+    display: flex;
+    align-items: center;
+}
+.squares{
+    width: 85%;
+    height: 85%;
+    border: solid 1px;
+}
