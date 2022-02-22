@@ -1,4 +1,8 @@
 const square = document.querySelector('.squares');
+const toggleGrid = document.querySelector('.grid');
+const clear = document.querySelector('.clear');
+const eraser = document.querySelector('.eraser');
+const color = document.querySelector('.color');
 square.setAttribute('style', 'display:flex; flex-wrap: wrap;');
  
 
@@ -15,13 +19,50 @@ for (let i = 0; i < 16; i++) {
 const innerdivs=document.querySelectorAll('.squareclass');
 
 innerdivs.forEach((div)=>{
-div.addEventListener("click", ()=>{
-    div.style.backgroundColor = 'black';
-});
+  div.addEventListener("mouseover", ()=>{
+      div.style.backgroundColor = 'black';
 
+  });
+  })
+
+color.addEventListener('onclick', ()=>{
+  eraser.removeEventListener('click', false);
+  
+  innerdivs.forEach((div)=>{
+    //div.removeEventListener('mouseover',()=>{
+
+    //})
+    div.addEventListener("mouseover", ()=>{
+        div.style.backgroundColor = 'black';
+    });
+    })
 })
-console.log(innerdivs)
 
+
+toggleGrid.addEventListener('click', ()=>{
+  if (toggleGrid.active = true) {
+    innerdivs.forEach((div)=>{
+      div.style.outline = '1px solid';
+    
+    }) 
+  } 
+  })
+
+clear.addEventListener('click', ()=>{
+  innerdivs.forEach((div)=>{
+    div.style.backgroundColor = 'white';
+  })
+})
+
+eraser.addEventListener('click', ()=>{
+  innerdivs.forEach((div)=>{
+    if (eraser.active = true) {
+      div.addEventListener("mouseover", ()=>{
+        div.style.backgroundColor = 'white';
+    });
+    }
+    })
+})
 
 
 
