@@ -20,33 +20,34 @@ const innerdivs=document.querySelectorAll('.squareclass');
 
 innerdivs.forEach((div)=>{
   div.addEventListener("mouseover", ()=>{
+    if (eraser.active == true) {
+      div.style.backgroundColor = 'white';
+    }
+    else if (color.active == true) {
+      div.backgroundColor = 'black';
+    }
+    else{
       div.style.backgroundColor = 'black';
-
+    }    
   });
   })
 
-color.addEventListener('onclick', ()=>{
-  eraser.removeEventListener('click', false);
-  
-  innerdivs.forEach((div)=>{
-    //div.removeEventListener('mouseover',()=>{
-
-    //})
-    div.addEventListener("mouseover", ()=>{
-        div.style.backgroundColor = 'black';
-    });
-    })
-})
 
 
-toggleGrid.addEventListener('click', ()=>{
+toggleGrid.addEventListener('mouseover', ()=>{
   if (toggleGrid.active = true) {
     innerdivs.forEach((div)=>{
       div.style.outline = '1px solid';
-    
     }) 
   } 
   })
+  toggleGrid.addEventListener('mouseout', ()=>{
+    if (toggleGrid.active = true) {
+      innerdivs.forEach((div)=>{
+        div.style.outline = '0px';
+      }) 
+    } 
+    })
 
 clear.addEventListener('click', ()=>{
   innerdivs.forEach((div)=>{
@@ -56,11 +57,24 @@ clear.addEventListener('click', ()=>{
 
 eraser.addEventListener('click', ()=>{
   innerdivs.forEach((div)=>{
-    if (eraser.active = true) {
+    
       div.addEventListener("mouseover", ()=>{
         div.style.backgroundColor = 'white';
     });
-    }
+    
+    })
+})
+
+color.addEventListener('click', ()=>{
+  //eraser.removeEventListener('click', false);
+  
+  innerdivs.forEach((div)=>{
+    //div.removeEventListener('mouseover',()=>{
+
+    //})
+    div.addEventListener("mouseover", ()=>{
+        div.style.backgroundColor = 'black';
+    });
     })
 })
 
