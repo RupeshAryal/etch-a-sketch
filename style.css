@@ -73,6 +73,10 @@ button{
     height: 2.5rem;
     border-radius: 0.7rem;
 }
+.grid-size{
+    display: flex;
+    flex-direction: column;
+}
 
 .drawingpad{
     display: flex;
